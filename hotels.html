@@ -2,123 +2,192 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="" title="Ссылка на главную страницу">
-                <img src="https://via.placeholder.com/138x70" alt="Логотип города Седона">
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="" title="Ссылка на главную страницу">
+        <img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип города Седона">
+      </a>
+      <ul class="site-navigation">
+        <li><a class="site-navigation-current" href="">Информация</a></li>
+        <li><a href="">Фото и видео</a></li>
+        <li><a href="">Карта штата</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="filter">
+      <h2 class="hidden">Форма для фильтров</h2>
+      <div class="filter-features">
+        <h3 class="filter-label">Инфраструктура:</h3>
+        <ul class="filter-list">
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox" checked>
+              <span class="chec-box"></span>
+              <span class="title">Бассейн</span>
+            </label>
+          </li>
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox">
+              <span class="chec-box"></span>
+              <span class="title">Парковка</span>
+            </label>
+          </li>
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox">
+              <span class="chec-box"></span>
+              <span class="title">Wi-Fi</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="filter-type">
+        <h3 class="filter-label">Тип жилья:</h3>
+        <ul class="filter-list">
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox" checked>
+              <span class="chec-box"></span>
+              <span class="title">Гостиница</span>
+            </label>
+          </li>
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox" checked>
+              <span class="chec-box"></span>
+              <span class="title">Мотель</span>
+            </label>
+          </li>
+          <li>
+            <label class="filter-item">
+              <input class="filter-item-check" type="checkbox" checked>
+              <span class="chec-box"></span>
+              <span class="title">Аппартаменты</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="filter-price">
+        <p class="filter-label">Стоимость в сутки (р):</p>
+        <p>
+          <div class="filter-price-from">От 0</div>
+          <div class="filter-price-to">До 3000</div>
+        </p>
+      </div>
+      <input class="fulter-buttom-submit" type="submit" value="Показать">
+    </section>
+
+    <section class="results">
+      <h2 class="hidden">Результаты поиска</h2>
+      <div class="results-sort">
+        <p class="results-found">Найдено: 3</p>
+        <div>
+          <h3 class="results-sort-title">Сортировка:</h3>
+          <ul class="results-sort-list">
+            <li><a class="results-sort-item active" href="">По цене</a></li>
+            <li><a class="results-sort-item" href="">По типу</a></li>
+            <li><a class="results-sort-item" href="">По рейтингу</a></li>
+          </ul>
+          <div class="results-sort-buttoms"></div>
+            <a class="results-sort-buttom-up" href="" title="Сортировка по возростанию">
+              <svg aria-label="Сортировка по возростанию" width="11" height="10"></svg>
             </a>
-            <ul>
-                <li><a href="">Информация</a></li>
-                <li><a href="">Фото и видео</a></li>
-                <li><a href="">Карта штата</a></li>
-                <li><a href="hotels.html">Гостиницы</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Форма для фильтров</h2>
-        </section>
-        <section>
-            <h2>Результаты поиска</h2>
-            <p>Найдено: 3</p>
-            <setion>
-                <h3>Сортировка</h3>
-                <ul>
-                    <li><a href="">По цене</a></li>
-                    <li><a href="">По типу</a></li>
-                    <li><a href="">По рейтингу</a></li>
-                </ul>
-                <a href="" title="Сортировка по возростанию">
-                    <svg aria-label="Сортировка по возростанию" width="11" height="10"></svg>
-                </a>
-                <a href="" title="Сортировка по убыванию">
-                    <svg aria-label="Сортировка по убыванию" width="11" height="10"></svg>
-                </a>
-            </setion>
-            <section>
-                <h3>Результаты</h3>
-                <ol>
-                    <li>
-                        <img src="https://via.placeholder.com/135x90" alt="Фотография отеля Амара">
-                        <h3>Aara resort & spa</h3>
-                        <p>
-                            <span>Гостиница</span>
-                            <span>от 4000 р.</span><br>
-                            <a href="">Подробнее</a>
-                            <a href="">Забронировать</a>
-                        </p>
-                        <svg aria-label="4 звезды" width="40" height="17"></svg>
-                        <p>Рейтинг: 8,5</p>
-                    </li>
-                    <li>
-                        <img src="https://via.placeholder.com/135x90" alt="Фотография отеля Дезерт">
-                        <h3>Desert quail inn</h3>
-                        <p>
-                            <span>Мотель</span>
-                            <span>от 3000 р.</span><br>
-                            <a href="">Подробнее</a>
-                            <a href="">Забронировать</a>
-                        </p>
-                        <svg aria-label="3 звезды" width="30" height="17"></svg>
-                        <p>Рейтинг: 8,9</p>
-                    </li>
-                    <li>
-                        <img src="https://via.placeholder.com/135x90" alt="Фотография отеля Виллас">
-                        <h3>Villas at poco diablo</h3>
-                        <p>
-                            <span>Апартаменты</span>
-                            <span>от 2000 р.</span><br>
-                            <a href="">Подробнее</a>
-                            <a href="">Забронировать</a>
-                        </p>
-                        <svg aria-label="2 звезды" width="20" height="17"></svg>
-                        <p>Рейтинг: 9,2</p>
-                    </li>
-                </ol>
-            </section>
-        </section>
-    </main>
-
-    <footer>
-        <section>
-            <h2>Контакты</h2>
+            <a class="results-sort-buttom-down" href="" title="Сортировка по убыванию">
+              <svg aria-label="Сортировка по убыванию" width="11" height="10"></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="hidden">Результаты</h3>
+        <ul class="results-list">
+          <li class="results-list-item">
+            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Амара">
+            <h3 class="results-list-item-name">Aara resort & spa</h3>
             <p>
-                <a href="">#VisitSedona</a><br>
-                <a href="tel:84956660166">Тел:+7(495)666-01-66</a>
+              <span class="results-list-item-type">Гостиница</span>
+              <span class="results-list-item-price">от 4000 р.</span><br>
+              <a class="results-list-item-button-details" href="">Подробнее</a>
+              <a class="results-list-item-button-book" href="">Забронировать</a>
             </p>
-        </section>
-
-        <section>
-            <h2>Соцсети</h2>
-            <ul>
-                <li>
-                    <a href="">Twitter</a>
-                </li>
-                <li>
-                    <a href="">Facebook</a>
-                </li>
-                <li>
-                    <a href="">YouTube</a>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Лого академии</h2>
-            <p>website by
-                <a href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="https://via.placeholder.com/31x40" alt="HTML Academy лого">
-                </a>
+            <svg class="results-list-item-stars" aria-label="4 звезды" width="40" height="17"></svg>
+            <p class="results-list-item-rate">Рейтинг: 8,5</p>
+          </li>
+          <li class="results-list-item">
+            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Дезерт">
+            <h3 class="results-list-item-name">Desert quail inn</h3>
+            <p>
+              <span class="results-list-item-type">Мотель</span>
+              <span class="results-list-item-price">от 3000 р.</span><br>
+              <a class="results-list-item-button-details" href="">Подробнее</a>
+              <a class="results-list-item-button-book" href="">Забронировать</a>
             </p>
-        </section>
-    </footer>
+            <svg class="results-list-item-stars" aria-label="3 звезды" width="30" height="17"></svg>
+            <p class="results-list-item-rate">Рейтинг: 8,9</p>
+          </li>
+          <li class="results-list-item">
+            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Виллас">
+            <h3 class="results-list-item-name">Villas at poco diablo</h3>
+            <p>
+              <span class="results-list-item-type">Апартаменты</span>
+              <span class="results-list-item-price">от 2000 р.</span><br>
+              <a class="results-list-item-button-details" href="">Подробнее</a>
+              <a class="results-list-item-button-book" href="">Забронировать</a>
+            </p>
+            <svg class="results-list-item-stars"  aria-label="2 звезды" width="20" height="17"></svg>
+            <p class="results-list-item-rate">Рейтинг: 9,2</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer main-footer">
+    <section class="footer-contacts">
+      <h2 class="hidden">Контакты</h2>
+      <p>
+        <a class="footer-hashtag" href="">#VisitSedona</a><br>
+        <a class="footer-phone" href="tel:84956660166">Тел:+7(495)666-01-66</a>
+      </p>
+    </section>
+
+    <section class="footer-social">
+      <h2 class="hidden">Соцсети</h2>
+      <ul class="social-list">
+        <li>
+          <a class="social-button" href="">Twitter</a>
+        </li>
+        <li>
+          <a class="social-button" href="">Facebook</a>
+        </li>
+        <li>
+          <a class="social-button" href="">YouTube</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="footer-logo">
+      <h2 class="hidden">Лого академии</h2>
+      <p>
+      <div class="footer-logo-text">website by</div>
+      <a class="footer-logo-button" href="https://htmlacademy.ru/intensive/htmlcss" title="Ссылка на интенсив">
+        <img src="https://via.placeholder.com/31x40" alt="HTML Academy лого">
+      </a>
+      </p>
+    </section>
+  </footer>
 </body>
 
 </html>
