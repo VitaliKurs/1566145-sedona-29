@@ -33,21 +33,21 @@
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox" checked>
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Бассейн</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox">
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Парковка</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox">
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Wi-Fi</span>
             </label>
           </li>
@@ -59,21 +59,21 @@
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox" checked>
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Гостиница</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox" checked>
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Мотель</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
               <input class="filter-item-check" type="checkbox" checked>
-              <span class="chec-box"></span>
+              <span class="check-box"></span>
               <span class="title">Аппартаменты</span>
             </label>
           </li>
@@ -96,9 +96,24 @@
         <div>
           <h3 class="results-sort-title">Сортировка:</h3>
           <ul class="results-sort-list">
-            <li><a class="results-sort-item active" href="">По цене</a></li>
-            <li><a class="results-sort-item" href="">По типу</a></li>
-            <li><a class="results-sort-item" href="">По рейтингу</a></li>
+            <li>
+              <label class="results-sort-item">
+                <input name="sort" type="radio" value="price" checked>
+                <span class="title">По цене</span>
+              </label>
+            </li>
+            <li>
+              <label class="results-sort-item">
+                <input name="sort" type="radio" value="type">
+                <span class="title">По типу</span>
+              </label>
+            </li>
+            <li>
+              <label class="results-sort-item">
+                <input name="sort" type="radio" value="rate">
+                <span class="title">По рейтингу</span>
+              </label>
+            </li>
           </ul>
           <div class="results-sort-buttoms"></div>
             <a class="results-sort-buttom-up" href="" title="Сортировка по возростанию">
@@ -118,10 +133,10 @@
             <h3 class="results-list-item-name">Aara resort & spa</h3>
             <p>
               <span class="results-list-item-type">Гостиница</span>
-              <span class="results-list-item-price">от 4000 р.</span><br>
-              <a class="results-list-item-button-details" href="">Подробнее</a>
-              <a class="results-list-item-button-book" href="">Забронировать</a>
+              <span class="results-list-item-price">от 4000 р.</span>
             </p>
+            <a class="results-list-item-button-details" href="">Подробнее</a>
+            <a class="results-list-item-button-book" href="">Забронировать</a>
             <svg class="results-list-item-stars" aria-label="4 звезды" width="40" height="17"></svg>
             <p class="results-list-item-rate">Рейтинг: 8,5</p>
           </li>
@@ -130,10 +145,10 @@
             <h3 class="results-list-item-name">Desert quail inn</h3>
             <p>
               <span class="results-list-item-type">Мотель</span>
-              <span class="results-list-item-price">от 3000 р.</span><br>
-              <a class="results-list-item-button-details" href="">Подробнее</a>
-              <a class="results-list-item-button-book" href="">Забронировать</a>
+              <span class="results-list-item-price">от 3000 р.</span>
             </p>
+            <a class="results-list-item-button-details" href="">Подробнее</a>
+            <a class="results-list-item-button-book" href="">Забронировать</a>
             <svg class="results-list-item-stars" aria-label="3 звезды" width="30" height="17"></svg>
             <p class="results-list-item-rate">Рейтинг: 8,9</p>
           </li>
@@ -142,10 +157,10 @@
             <h3 class="results-list-item-name">Villas at poco diablo</h3>
             <p>
               <span class="results-list-item-type">Апартаменты</span>
-              <span class="results-list-item-price">от 2000 р.</span><br>
-              <a class="results-list-item-button-details" href="">Подробнее</a>
-              <a class="results-list-item-button-book" href="">Забронировать</a>
+              <span class="results-list-item-price">от 2000 р.</span>
             </p>
+            <a class="results-list-item-button-details" href="">Подробнее</a>
+            <a class="results-list-item-button-book" href="">Забронировать</a>
             <svg class="results-list-item-stars"  aria-label="2 звезды" width="20" height="17"></svg>
             <p class="results-list-item-rate">Рейтинг: 9,2</p>
           </li>
