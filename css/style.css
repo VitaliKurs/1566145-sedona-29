@@ -39,6 +39,11 @@
   --results-button-back-book: #766357;
   --results-button-back-book-hover:#604E43;
   --results-button-back-book-focus:#503E33;
+
+  --sort-button: #CACACA;
+  --sort-button-hover: #000000;
+  --sort-button-focus: #81B3D2;
+  --sort-button-active: #81B3D2;
 }
 
 body {
@@ -287,8 +292,33 @@ a.site-navigation-current {
   list-style: none;
 }
 
+.filter-item {
+  padding-left: 2.5em;
+}
+
 .filter-item .title {
   color: var(--filter-text);
+}
+
+.filter-item .check-box {
+  position: absolute;
+  margin-left: -2.5em;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.filter-item input:checked + .check-box {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-item input:disabled + .check-box {
+  background-image: url(../img/checkbox-off-dis.svg);
+}
+
+.filter-item input:checked:disabled + .check-box {
+  background-image: url(../img/checkbox-on-dis.svg);
 }
 
 .filter-price-from,
@@ -296,14 +326,14 @@ a.site-navigation-current {
   color: var(--filter-text);
 }
 
-.fulter-buttom-submit {
+.fulter-button-submit {
   all: unset;
   color: var(--filter-text);
   text-align: center;
   align-items: center;
 }
 
-.fulter-buttom-submit:hover {
+.fulter-button-submit:hover {
   color:var(--filter-button-text-hover);
   background-color: var(--filter-button-back-hover)
 }
@@ -348,6 +378,25 @@ a.site-navigation-current {
   color: var(--sort-text-focus);
   opacity: 1;
 }
+
+/* Sort buttons */
+
+.results-sort-buttons {
+  list-style: none;
+}
+
+.results-sort-button:hover svg path  {
+  fill: var(--sort-button-hover);
+}
+
+.results-sort-button input:checked + svg path  {
+  fill: var(--sort-button-active);
+}
+
+.results-sort-button:active svg path  {
+  fill: var(--sort-button-focus);
+}
+
 
 /* List of results */
 
@@ -413,3 +462,8 @@ a.site-navigation-current {
   color: var(--results-rate-back);
   background-image: var(--results-rate-back);
 }
+
+.stars-list {
+  list-style: none;
+}
+

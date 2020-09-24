@@ -12,14 +12,14 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-header-logo" href="" title="Ссылка на главную страницу">
-        <img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип города Седона">
+      <a class="main-header-logo" href="index.html" title="Ссылка на главную страницу">
+        <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
       </a>
       <ul class="site-navigation">
-        <li><a class="site-navigation-current" href="">Информация</a></li>
+        <li><a href="index.html">Информация</a></li>
         <li><a href="">Фото и видео</a></li>
         <li><a href="">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li><a class="site-navigation-current" href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -32,21 +32,21 @@
         <ul class="filter-list">
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox" checked>
+              <input class="filter-item-check visually-hidden" type="checkbox" checked>
               <span class="check-box"></span>
               <span class="title">Бассейн</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox">
+              <input class="filter-item-check visually-hidden" type="checkbox">
               <span class="check-box"></span>
               <span class="title">Парковка</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox">
+              <input class="filter-item-check visually-hidden" type="checkbox">
               <span class="check-box"></span>
               <span class="title">Wi-Fi</span>
             </label>
@@ -58,21 +58,21 @@
         <ul class="filter-list">
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox" checked>
+              <input class="filter-item-check visually-hidden" type="checkbox" checked>
               <span class="check-box"></span>
               <span class="title">Гостиница</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox" checked>
+              <input class="filter-item-check visually-hidden" type="checkbox" checked>
               <span class="check-box"></span>
               <span class="title">Мотель</span>
             </label>
           </li>
           <li>
             <label class="filter-item">
-              <input class="filter-item-check" type="checkbox" checked>
+              <input class="filter-item-check visually-hidden" type="checkbox" checked>
               <span class="check-box"></span>
               <span class="title">Аппартаменты</span>
             </label>
@@ -86,7 +86,7 @@
           <div class="filter-price-to">До 3000</div>
         </p>
       </div>
-      <input class="fulter-buttom-submit" type="submit" value="Показать">
+      <input class="fulter-button-submit" type="submit" value="Показать">
     </section>
 
     <section class="results">
@@ -98,38 +98,48 @@
           <ul class="results-sort-list">
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="price" checked>
+                <input name="sort" type="radio" value="price" class="visually-hidden" checked>
                 <span class="title">По цене</span>
               </label>
             </li>
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="type">
+                <input name="sort" type="radio" value="type"  class="visually-hidden">
                 <span class="title">По типу</span>
               </label>
             </li>
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="rate">
+                <input name="sort" type="radio" value="rate" class="visually-hidden">
                 <span class="title">По рейтингу</span>
               </label>
             </li>
           </ul>
-          <div class="results-sort-buttoms"></div>
-            <a class="results-sort-buttom-up" href="" title="Сортировка по возростанию">
-              <svg aria-label="Сортировка по возростанию" width="11" height="10"></svg>
-            </a>
-            <a class="results-sort-buttom-down" href="" title="Сортировка по убыванию">
-              <svg aria-label="Сортировка по убыванию" width="11" height="10"></svg>
-            </a>
-          </div>
+          <ul class="results-sort-buttons">
+            <li>
+              <label class="results-sort-button">
+                <input name="sort-button" type="radio" value="up" class="visually-hidden">
+                <svg aria-label="Сортировка по возростанию" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <label class="results-sort-button">
+                <input name="sort-button" type="radio" value="up" class="visually-hidden" checked>
+                <svg aria-label="Сортировка по убыванию" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#CACACA"/>
+                </svg>
+              </label>
+            </li>
+          </ul>
         </div>
       </div>
       <div>
         <h3 class="hidden">Результаты</h3>
         <ul class="results-list">
           <li class="results-list-item">
-            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Амара">
+            <img class="results-list-item-photo" src="img/Hotel-Amara.jpg" width="135" height="90" alt="Фотография отеля Амара">
             <h3 class="results-list-item-name">Aara resort & spa</h3>
             <p>
               <span class="results-list-item-type">Гостиница</span>
@@ -137,11 +147,16 @@
             </p>
             <a class="results-list-item-button-details" href="">Подробнее</a>
             <a class="results-list-item-button-book" href="">Забронировать</a>
-            <svg class="results-list-item-stars" aria-label="4 звезды" width="40" height="17"></svg>
+            <ol class="stars-list">
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+            </ol>
             <p class="results-list-item-rate">Рейтинг: 8,5</p>
           </li>
           <li class="results-list-item">
-            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Дезерт">
+            <img class="results-list-item-photo" src="img/Hotel-Desert.jpg" width="135" height="90" alt="Фотография отеля Дезерт">
             <h3 class="results-list-item-name">Desert quail inn</h3>
             <p>
               <span class="results-list-item-type">Мотель</span>
@@ -149,11 +164,15 @@
             </p>
             <a class="results-list-item-button-details" href="">Подробнее</a>
             <a class="results-list-item-button-book" href="">Забронировать</a>
-            <svg class="results-list-item-stars" aria-label="3 звезды" width="30" height="17"></svg>
+            <ol class="stars-list">
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+            </ol>
             <p class="results-list-item-rate">Рейтинг: 8,9</p>
           </li>
           <li class="results-list-item">
-            <img class="results-list-item-photo" src="https://via.placeholder.com/135x90" alt="Фотография отеля Виллас">
+            <img class="results-list-item-photo" src="img/Hotel-Villas.jpg" width="135" height="90" alt="Фотография отеля Виллас">
             <h3 class="results-list-item-name">Villas at poco diablo</h3>
             <p>
               <span class="results-list-item-type">Апартаменты</span>
@@ -161,7 +180,10 @@
             </p>
             <a class="results-list-item-button-details" href="">Подробнее</a>
             <a class="results-list-item-button-book" href="">Забронировать</a>
-            <svg class="results-list-item-stars"  aria-label="2 звезды" width="20" height="17"></svg>
+            <ol class="stars-list">
+              <li><img src="img/star.svg" width="19" height="17"></li>
+              <li><img src="img/star.svg" width="19" height="17"></li>
+            </ol>
             <p class="results-list-item-rate">Рейтинг: 9,2</p>
           </li>
         </ul>
@@ -182,13 +204,19 @@
       <h2 class="hidden">Соцсети</h2>
       <ul class="social-list">
         <li>
-          <a class="social-button" href="">Twitter</a>
+          <a class="social-button" href="">
+            <img src="img/twitter.svg" width="17" height="15" alt="Twitter">
+          </a>
         </li>
         <li>
-          <a class="social-button" href="">Facebook</a>
+          <a class="social-button" href="">
+            <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">
+          </a>
         </li>
         <li>
-          <a class="social-button" href="">YouTube</a>
+          <a class="social-button" href="">
+            <img src="img/youtube.svg" width="20" height="16" alt="Youtube">
+          </a>
         </li>
       </ul>
     </section>
@@ -198,7 +226,7 @@
       <p>
       <div class="footer-logo-text">website by</div>
       <a class="footer-logo-button" href="https://htmlacademy.ru/intensive/htmlcss" title="Ссылка на интенсив">
-        <img src="https://via.placeholder.com/31x40" alt="HTML Academy лого">
+        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy лого">
       </a>
       </p>
     </section>
