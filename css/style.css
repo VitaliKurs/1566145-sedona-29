@@ -463,7 +463,7 @@ a.site-navigation-current {
   background-image: var(--results-rate-back);
 }
 
-.stars-list {
+.results-list-item-rate {
   list-style: none;
 }
 
