@@ -44,6 +44,8 @@
   --sort-button-hover: #000000;
   --sort-button-focus: #81B3D2;
   --sort-button-active: #81B3D2;
+
+  --hotels-lines: #E5E5E5;
 }
 
 body {
@@ -431,6 +433,21 @@ a.site-navigation-current {
 
 .filter {
   background-color: var(--filter-back);
+  background-image: url(../img/background-filter.jpg);
+  height: 217px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+}
+
+.filter-features {
+  margin-left: 72px;
+  padding-top: 26px;
+}
+
+.filter-type {
+  padding-top: 26px;
 }
 
 .filter-label {
@@ -438,10 +455,18 @@ a.site-navigation-current {
   font-size: 16px;
   line-height: 21px;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-list li {
+  margin-top: 25px;
 }
 
 .filter-item {
@@ -473,24 +498,56 @@ a.site-navigation-current {
   background-image: url(../img/checkbox-on-dis.svg);
 }
 
+.filter-price {
+  padding-top: 26px;
+  width: 318px;
+  margin-left: 200px;
+}
+
+.filter-price-range {
+  margin-top: 10px;
+  height: 36px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid var(--basic-white);
+}
+
 .filter-price-from,
 .filter-price-to {
   color: var(--filter-text);
+  margin: auto auto;
 }
 
-.fulter-button-submit {
+.filter-button-submit {
   all: unset;
   color: var(--filter-text);
   text-align: center;
   align-items: center;
 }
 
-.fulter-button-submit:hover {
+.filter-button-submit {
+  margin-top: 33px;
+  justify-self: center;
+}
+
+.filter-button-submit:hover {
   color:var(--filter-button-text-hover);
   background-color: var(--filter-button-back-hover)
 }
 
 /* Results sort */
+
+.results-sort {
+  display: grid;
+  height: 26px;
+  grid-template-columns: 135px 80px 1fr 40px;
+  column-gap: 29px;
+  border-bottom: 1px solid var(--hotels-lines);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 73px;
+  padding-right: 73px
+}
 
 .results-found {
   color: var(--results-text);
@@ -498,6 +555,8 @@ a.site-navigation-current {
   line-height: 26px;
   font-weight: bold;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .results-sort-title {
@@ -505,10 +564,22 @@ a.site-navigation-current {
   font-size: 12px;
   line-height: 18px;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .results-sort-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.results-sort-item {
+  padding: 0;
+  margin: 0;
 }
 
 .results-sort-item .title {
@@ -517,6 +588,9 @@ a.site-navigation-current {
   line-height: 18px;
   align-items: center;
   opacity: 0.3;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
 }
 
 .results-sort-item:hover .title,
@@ -534,6 +608,12 @@ a.site-navigation-current {
 
 .results-sort-buttons {
   list-style: none;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  justify-self: end;
 }
 
 .results-sort-button:hover svg path  {
@@ -552,6 +632,29 @@ a.site-navigation-current {
 
 .results-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.results-list-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 73px;
+  padding-right: 73px;
+  height: 90px;
+  display: grid;
+  grid-template-rows: 25% 25% 50%;
+  grid-template-columns: 135px 1fr 110px;
+  column-gap: 29px;
+  border-bottom: 1px solid var(--hotels-lines);
+}
+
+.results-list-item-photo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
 }
 
 .results-list-item-name {
@@ -559,6 +662,27 @@ a.site-navigation-current {
   line-height: 26px;
   align-items: center;
   font-weight: bold;
+  margin-top: 0;
+}
+
+.results-list-item-info {
+  margin-top: 0;
+}
+
+.results-list-item-stars {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: end;
+}
+
+.results-list-item-rate {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: end;
 }
 
 .results-list-item-name:hover {
@@ -633,7 +757,7 @@ a.site-navigation-current {
 
 
 .results-list-item-rate {
-  color: var(--results-rate-back);
+  color: var(--results-rate-text);
   background-image: var(--results-rate-back);
 }
 
