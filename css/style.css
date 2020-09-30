@@ -438,7 +438,7 @@ a.site-navigation-current {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 25% 25% 50%;
+  grid-template-columns: 1fr 1fr 2fr;
 }
 
 .filter-features {
@@ -521,8 +521,11 @@ a.site-navigation-current {
 .filter-button-submit {
   all: unset;
   color: var(--filter-text);
+  border: 1px solid white;
   text-align: center;
   align-items: center;
+  width: 137px;
+  height: 36px;
 }
 
 .filter-button-submit {
@@ -543,10 +546,7 @@ a.site-navigation-current {
   grid-template-columns: 135px 80px 1fr 40px;
   column-gap: 29px;
   border-bottom: 1px solid var(--hotels-lines);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 73px;
-  padding-right: 73px
+  padding: 30px 73px;
 }
 
 .results-found {
@@ -570,9 +570,7 @@ a.site-navigation-current {
 
 .results-sort-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: min-content min-content min-content;
-  gap: 32px;
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -580,6 +578,7 @@ a.site-navigation-current {
 .results-sort-item {
   padding: 0;
   margin: 0;
+  margin-right: 32px;
 }
 
 .results-sort-item .title {
@@ -638,10 +637,7 @@ a.site-navigation-current {
 }
 
 .results-list-item {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding: 30px 73px;
   height: 90px;
   display: grid;
   grid-template-rows: 25% 25% 50%;
