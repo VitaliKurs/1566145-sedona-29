@@ -508,7 +508,7 @@ a.site-navigation-current {
   margin-top: 10px;
   height: 36px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   border: 1px solid var(--basic-white);
 }
 
@@ -516,7 +516,17 @@ a.site-navigation-current {
 .filter-price-to {
   color: var(--filter-text);
   margin: auto auto;
+  display: flex;
 }
+
+.filter-price-from input,
+.filter-price-to input {
+  all: unset;
+  color: var(--basic-white);
+  margin-left: 5px;
+  width: 50px;
+}
+
 
 .filter-button-submit {
   all: unset;

@@ -86,8 +86,14 @@
       <div class="filter-price">
         <p class="filter-label">Стоимость в сутки (р):</p>
         <div class="filter-price-range">
-          <div class="filter-price-from">От 0</div>
-          <div class="filter-price-to">До 3000</div>
+          <label class="filter-price-from">
+            <span>От</span>
+            <input type="number" name="from" min="0" value="0">
+          </label>
+          <label class="filter-price-to">
+            <span>До</span>
+            <input type="number" name="to" min="0" value="3000">
+          </label>
         </div>
         <button class="filter-button-submit" type="submit">Показать</button>
       </div>
