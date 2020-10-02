@@ -507,6 +507,7 @@ a.site-navigation-current {
 .filter-price-range {
   margin-top: 10px;
   height: 36px;
+  width: 317px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--basic-white);
@@ -519,12 +520,25 @@ a.site-navigation-current {
   display: flex;
 }
 
+
 .filter-price-from input,
 .filter-price-to input {
   all: unset;
   color: var(--basic-white);
   margin-left: 5px;
   width: 50px;
+}
+
+.filter-price-from input::-webkit-outer-spin-button,
+.filter-price-from input::-webkit-inner-spin-button,
+.filter-price-to input::-webkit-outer-spin-button,
+.filter-price-to input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.filter-price-from input[type='number'],
+.filter-price-to input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 
