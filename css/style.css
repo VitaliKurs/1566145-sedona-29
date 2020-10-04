@@ -105,7 +105,9 @@ img {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-header-logo {
@@ -122,7 +124,9 @@ img {
 
 .main-navigation-wrapper {
   width: 1200px;
+  height: 56px;
   margin: 0 auto;
+  margin-bottom: -14px;
   padding: 0 10px;
 }
 
@@ -130,6 +134,12 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.site-navigation li:nth-of-type(3) {
+  margin-left: 200px;
 }
 
 .site-navigation a {
@@ -248,11 +258,6 @@ a.site-navigation-current {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
-/* .features-item-big.second .features-item {
-  grid-column-start: 3;
-  grid-column-end: 4;
-} */
 
 .features-item-big.second .features-background-rock {
   grid-column-start: 1;
@@ -382,8 +387,12 @@ a.site-navigation-current {
 }
 
 .main-footer .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-footer {
+  display: flex;
 }
 
 .footer-contacts {
@@ -404,11 +413,19 @@ a.site-navigation-current {
 }
 
 .footer-social {
-  justify-self: center;
+  align-items: center;
+  display: flex;
+  width: 100px;
+  height: 100%;
 }
 
 .social-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .social-button {
@@ -508,8 +525,7 @@ a.site-navigation-current {
   margin-top: 10px;
   height: 36px;
   width: 317px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   border: 1px solid var(--basic-white);
 }
 
@@ -567,7 +583,7 @@ a.site-navigation-current {
 .results-sort {
   display: grid;
   height: 26px;
-  grid-template-columns: 135px 80px 1fr 40px;
+  grid-template-columns: 135px 80px 1fr 50px;
   column-gap: 29px;
   border-bottom: 1px solid var(--hotels-lines);
   padding: 30px 73px;
@@ -631,12 +647,16 @@ a.site-navigation-current {
 
 .results-sort-buttons {
   list-style: none;
-  display: grid;
-  grid-template-columns: min-content min-content;
+  display: flex;
   gap: 12px;
   margin: 0;
   padding: 0;
   justify-self: end;
+}
+
+.results-sort-button {
+  margin-top: 0;
+  margin-left: 10px;
 }
 
 .results-sort-button:hover svg path  {
@@ -664,7 +684,7 @@ a.site-navigation-current {
   padding: 30px 73px;
   height: 90px;
   display: grid;
-  grid-template-rows: 25% 25% 50%;
+  grid-template-rows: 1fr 1fr 2fr;
   grid-template-columns: 135px 1fr 110px;
   column-gap: 29px;
   border-bottom: 1px solid var(--hotels-lines);
