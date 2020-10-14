@@ -18,8 +18,10 @@
       <div class="main-header-bar">
         <div class="main-navigation-wrapper">
           <ul class="site-navigation">
-            <li><a href="index.html">Информация</a></li>
-            <li><a href="">Фото и видео</a></li>
+            <div class="menu-left">
+              <li><a href="index.html">Информация</a></li>
+              <li><a href="">Фото и видео</a></li>
+            </div>
             <li><a href="">Карта штата</a></li>
             <li><a class="site-navigation-current" href="hotels.html">Гостиницы</a></li>
           </ul>
@@ -29,7 +31,7 @@
   </header>
 
   <main class="container">
-    <section class="filter">
+    <form method="get" action="" class="filter">
       <h2 class="visually-hidden">Форма для фильтров</h2>
       <div class="filter-features">
         <h3 class="filter-label">Инфраструктура:</h3>
@@ -83,7 +85,7 @@
           </li>
         </ul>
       </div>
-      <div class="filter-price">
+      <fieldset class="filter-price">
         <p class="filter-label">Стоимость в сутки (р):</p>
         <div class="filter-price-range">
           <label class="filter-price-from">
@@ -95,9 +97,16 @@
             <input type="number" name="to" min="0" value="3000">
           </label>
         </div>
+        <div class="range-control">
+          <div class="scale">
+            <div class="bar"></div>
+          </div>
+          <div class="toggle toggle-min" tabindex="0"></div>
+          <div class="toggle toggle-max" tabindex="0"></div>
+        </div>
         <button class="filter-button-submit" type="submit">Показать</button>
-      </div>
-    </section>
+      </fieldset>
+    </form>
 
     <section class="sort">
       <h2 class="visually-hidden">Результаты поиска</h2>
