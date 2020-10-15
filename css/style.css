@@ -52,6 +52,16 @@
   --range-toggle-shadow: rgba(171, 171, 171, 0.3);
 
   --hotels-lines: #E5E5E5;
+
+  --social-back:#81B3D2;
+  --social-back-hover: #669EC0;
+  --social-back-focus: #5496BD;
+  --social-image: rgba(255,255,255,1);
+  --social-image-focus: rgba(255,255,255,0.5);
+
+  --logo: black;
+  --logo-hover: #81B3D2;
+  --logo-focus: #EBEBEB;
 }
 
 body {
@@ -140,38 +150,37 @@ img {
 }
 
 .site-navigation {
-  margin: auto 0;
+  margin-left: 73px;
+  margin-right: 72px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
-.menu-left, .menu-right {
-  width: 531px;
+.site-navigation li {
   display: flex;
+  align-items: center;
+  /* width: 100%; */
 }
 
-.menu-left li:first-child {
-  margin-left: 72px;
+.site-navigation li:nth-child(2) {
+  margin-left: 133px;
 }
 
-.menu-left li {
-  margin-right: auto;
+
+
+.site-navigation li:nth-child(4) {
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.menu-right {
-  margin-left: 138px;
-}
-
-.menu-right li:last-child {
-  margin-right: 72px;
-}
-
-.menu-right li {
+.site-navigation li:nth-child(3) {
+  margin-right: 147px;
   margin-left: auto;
 }
+
 
 
 
@@ -506,9 +515,24 @@ a.site-navigation-current {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--basic-blue-back);
+  background-color: var(--social-back);
   margin-right: 6px;
 }
+
+.social-button:hover {
+  background-color: var(--social-back-hover);
+}
+
+
+.social-button:focus {
+  background-color: var(--social-back-focus);
+}
+
+.social-button:focus svg path{
+  fill: var(--social-image-focus);
+}
+
+
 
 .social-list li:last-of-type .social-button {
   margin-right: 0;
@@ -520,7 +544,6 @@ a.site-navigation-current {
 
 .footer-logo {
   margin-right: 72px;
-  /* align-self: center; */
   justify-self: center;
   display: flex;
 }
@@ -533,6 +556,14 @@ a.site-navigation-current {
 
 .footer-logo-button {
   margin-top: 39px;
+}
+
+.footer-logo-button:hover svg path {
+  fill: var(--logo-hover)
+}
+
+.footer-logo-button:focus svg path {
+  fill: var(--logo-focus)
 }
 
 /***** Hotels *****/
@@ -555,6 +586,7 @@ a.site-navigation-current {
 }
 
 .filter-type {
+  margin-left: 26px;
   padding-top: 26px;
 }
 
@@ -578,7 +610,7 @@ a.site-navigation-current {
 }
 
 .filter-item {
-  padding-left: 2.5em;
+  padding-left: 40px;
 }
 
 .filter-item .title {
@@ -587,7 +619,7 @@ a.site-navigation-current {
 
 .filter-item .check-box {
   position: absolute;
-  margin-left: -2.5em;
+  margin-left: -40px;
   width: 2em;
   height: 2em;
   background-repeat: no-repeat;
@@ -607,6 +639,7 @@ a.site-navigation-current {
 }
 
 .filter-price {
+  display: flex;
   padding-top: 26px;
   width: 318px;
   margin-left: 200px;
@@ -614,26 +647,42 @@ a.site-navigation-current {
 }
 
 .filter-price-range {
-  margin-top: 10px;
-  height: 36px;
-  width: 317px;
+  margin-top: 11px;
+  height: 32px;
+  width: 313px;
   display: flex;
-  border: 1px solid var(--basic-white);
+  border: 2px solid var(--basic-white);
 }
 
 .filter-price-from,
 .filter-price-to {
   color: var(--filter-text);
-  margin: auto;
+  margin-top: 5px;
+  margin-bottom: auto;
+  margin-left: 65px;
   display: flex;
+  width: 100%;
+}
+
+.filter-price-to {
+  margin-left: 42px;
+}
+
+.filter-price-from:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 23px;
+  background-color: var(--basic-white);
+  margin-left: 92px;
 }
 
 
 .filter-price-from input,
 .filter-price-to input {
   color: var(--basic-white);
-  margin-left: 5px;
-  width: 50px;
+  margin-top: 0;
+  width: 40px;
   font-family: inherit;
   font-size: inherit;
   border: none;
@@ -698,11 +747,12 @@ a.site-navigation-current {
 .filter-button-submit {
   all: unset;
   color: var(--filter-text);
-  border: 1px solid white;
+  border: 2px solid var(--basic-white);
   text-align: center;
   align-items: center;
-  width: 137px;
-  height: 36px;
+  width: 133px;
+  height: 32px;
+  margin-left: 85px;
 }
 
 .filter-button-submit {
@@ -948,9 +998,9 @@ a.site-navigation-current {
 
 .modal-search {
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
-  margin: 0 auto;
+  margin: auto;
   padding: 0;
   top: 2169px;
   justify-self: center;
