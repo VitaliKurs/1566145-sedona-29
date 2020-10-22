@@ -440,6 +440,7 @@ a.site-navigation-current {
   border: none;
   width: 568px;
   height: 86px;
+  cursor: pointer
 }
 
 .search-button:hover {
@@ -643,6 +644,7 @@ a.site-navigation-current {
 
 .filter-price {
   display: flex;
+  flex-direction: column;
   padding-top: 26px;
   width: 318px;
   margin-left: 200px;
@@ -899,6 +901,10 @@ a.site-navigation-current {
   margin-top: 7px;
 }
 
+.results-list-item h3 {
+  margin: 0;
+}
+
 .results-list-item-name {
   font-size: 21px;
   line-height: 26px;
@@ -1015,15 +1021,18 @@ a.site-navigation-current {
 }
 
 .results-list-item-stars.four-stars {
-  width: 76px;
+  width: 96px;
+  margin-right: -7px;
 }
 
 .results-list-item-stars.three-stars {
-  width: 57px;
+  width: 72px;
+  margin-right: -7px;
 }
 
 .results-list-item-stars.two-stars {
-  width: 38px;
+  width: 48px;
+  margin-right: -7px;
 }
 
 
