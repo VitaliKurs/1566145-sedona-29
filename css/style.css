@@ -33,6 +33,7 @@
   --results-hotel-title-hover: #81B3D2;
   --results-hotel-title-focus: #000000;
   --results-button-text: #FFFFFF;
+  --results-button-text-press: rgba(255,255,255,0.3);
   --results-button-back-details: #81B3D2;
   --results-button-back-details-hover: #669EC0;
   --results-button-back-details-focus: #5496BD;
@@ -64,6 +65,18 @@
   --logo: black;
   --logo-hover: #81B3D2;
   --logo-focus: #EBEBEB;
+
+  --modal-shadow: rgba(0, 1, 1, 0.15);
+  --modal-input-back: #F2F2F2;
+  --modal-input-back-hover:#EBEBEB;
+  --modal-input-back-focus: #FFFFFF;
+  --modal-input-border-focus: #E5E5E5;
+  --modal-button-hover: #000000;
+  --modal-button-press: #81B3D2;
+  --modal-search-back: #81B3D2;
+  --modal-search-back-hover: #669EC0;
+  --modal-search-back-press: #5496BD;
+  --modal-search-text-press: rgba(255,255,255,0.3);
 }
 
 body {
@@ -105,6 +118,7 @@ img {
 
 .page {
   height: 100%;
+
 }
 
 .page-body {
@@ -136,6 +150,7 @@ img {
   justify-self: center;
   z-index: 1;
   order: 1;
+  cursor: pointer;
 }
 
 .main-header-bar {
@@ -164,7 +179,6 @@ img {
 .site-navigation li {
   display: flex;
   align-items: center;
-  /* width: 100%; */
 }
 
 .site-navigation li:nth-child(2) {
@@ -191,6 +205,7 @@ img {
   font-weight: bold;
   text-align: center;
   vertical-align: center;
+  cursor: pointer;
 }
 
 .site-navigation a:hover {
@@ -229,12 +244,22 @@ a.site-navigation-current {
   width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
+  box-shadow: 0px 7px 15px var(--modal-shadow);
 }
 
 .welcome-background {
   height: 509px;
   width: 1200px;
   background-image: url(../img/background.jpg);
+}
+
+.welcome-background::after {
+  display: block;
+  content: "";
+  width: 1200px;
+  height: 57px;
+  background-image: url(../img/back-border.svg);
+  margin-top: 24px;
 }
 
 .welcome-title {
@@ -440,7 +465,7 @@ a.site-navigation-current {
   border: none;
   width: 568px;
   height: 86px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .search-button:hover {
@@ -493,11 +518,13 @@ a.site-navigation-current {
   align-items: center;
   color: inherit;
   margin-top: 23px;
+  cursor: pointer;
 }
 
 .footer-phone {
   color: inherit;
   margin-top: 9px;
+  cursor: pointer;
 }
 
 .footer-social {
@@ -521,6 +548,7 @@ a.site-navigation-current {
   justify-content: center;
   background-color: var(--social-back);
   margin-right: 6px;
+  cursor: pointer;
 }
 
 .social-button:hover {
@@ -560,6 +588,7 @@ a.site-navigation-current {
 
 .footer-logo-button {
   margin-top: 39px;
+  cursor: pointer;
 }
 
 .footer-logo-button:hover svg path {
@@ -628,6 +657,7 @@ a.site-navigation-current {
   height: 2em;
   background-repeat: no-repeat;
   background-image: url(../img/checkbox-off.svg);
+  cursor: pointer;
 }
 
 .filter-item input:checked + .check-box {
@@ -725,6 +755,7 @@ a.site-navigation-current {
 }
 
 .range-control .toggle {
+  outline: none;
   width: 3px;
   height: 3px;
   background: var(--range-toggle-small);
@@ -758,9 +789,7 @@ a.site-navigation-current {
   width: 133px;
   height: 32px;
   margin-left: 85px;
-}
-
-.filter-button-submit {
+  cursor: pointer;
   margin-top: 33px;
   justify-self: center;
 }
@@ -816,6 +845,7 @@ a.site-navigation-current {
   padding: 0;
   margin: 0;
   margin-right: 32px;
+  cursor: pointer;
 }
 
 .results-sort-item .title {
@@ -860,6 +890,7 @@ a.site-navigation-current {
 .results-sort-button {
   margin-top: 0;
   margin-left: 11px;
+  cursor: pointer;
 }
 
 .results-sort-button:hover svg path  {
@@ -982,7 +1013,7 @@ a.site-navigation-current {
 
 .results-list-item-button-details:active {
   background-color: var(--results-button-back-details-focus);
-  opacity: 0.3;
+  color: var(--results-button-text-press);
 }
 
 .results-list-item-button-book {
@@ -1056,16 +1087,133 @@ a.site-navigation-current {
 /* modal form */
 
 .modal-search {
-  display: none;
-  flex-direction: column;
   position: absolute;
-  margin: auto;
-  padding: 0;
   top: 2169px;
-  justify-self: center;
-  align-self: center;
-  height: 395px;
-  width: 568px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: 458px;
+  margin: auto;
+  padding: 55px;
   background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--modal-shadow);
+}
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  align-items: center;
+}
+
+.form-item .title {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  width: 112px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+
+}
+
+.form-input {
+  outline: none;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  height: 38px;
+  background-color: var(--modal-input-back);
+  border: none;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 2px;
+}
+
+.form-input:hover {
+  background-color: var(--modal-input-back-hover);
+}
+
+.form-input:focus {
+  background-color: var(--modal-input-back-focus);
+  outline: 2px solid var(--modal-input-border-focus);
+}
+
+
+.form-input-date {
+  width: 331px;
+}
+
+.form-input-num {
+  width: 99px;
+  text-align: center;
+}
+
+.form-people {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-people .form-item:last-child .title{
+  width: 62px;
+  margin-left: 29px;
+}
+
+.num-button {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.num-button:hover svg path,
+.num-button:hover svg rect {
+  fill: var(--modal-button-hover);
+}
+
+.num-button:active svg path,
+.num-button:active svg rect {
+  fill: var(--modal-button-press);
+}
+
+.num-down {
+  left: -105px;
+}
+
+.num-up {
+  left: -40px;
+}
+
+.form-button-submit {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: var(--basic-white);
+  background-color: var(--modal-search-back);
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.form-button-submit:hover {
+  background-color: var(--modal-search-back-hover);
+}
+
+.form-button-submit:active {
+  background-color: var(--modal-search-back-press);
+  color: var(--modal-search-text-press);
 }

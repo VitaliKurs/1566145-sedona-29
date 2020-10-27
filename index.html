@@ -175,20 +175,40 @@
     <form class="search-form">
       <label class="form-item">
         <span class="title">Дата заезда:</span>
-        <input type="date" class="form-input-date" name="date-from">
+        <input type="date" class="form-input form-input-date" name="date-from" value="2017-04-27">
       </label>
       <label class="form-item">
         <span class="title">Дата выезда:</span>
-        <input type="date" class="form-input-date" name="date-to">
+        <input type="date" class="form-input form-input-date" name="date-to" value="2017-07-04">
       </label>
-      <div class="form-peole">
+      <div class="form-people">
         <label class="form-item">
           <span class="title">Взрослые:</span>
-          <input type="number" class="form-input-num" name="adult">
+          <input type="number" class="form-input form-input-num" name="adult" value="2">
+          <div class="num-button num-down">
+            <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="12" height="3" fill="#A9A9A9"/>
+            </svg>
+          </div>
+          <div class="num-button num-up">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+            </svg>
+          </div>
         </label>
         <label class="form-item">
           <span class="title">Дети:</span>
-          <input type="number" class="form-input-num" name="child">
+          <input type="number" class="form-input form-input-num" name="child" value="0">
+          <div class="num-button num-down">
+            <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="12" height="3" fill="#A9A9A9"/>
+            </svg>
+          </div>
+          <div class="num-button num-up">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+            </svg>
+          </div>
         </label>
       </div>
       <button class="form-button-submit" type="submit">Найти</button>
