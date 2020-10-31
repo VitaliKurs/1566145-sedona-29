@@ -474,6 +474,10 @@ a.site-navigation-current {
   color: var(--search-button-text-focus);
 }
 
+.search-button:focus {
+  outline: var(--basic-black) solid 3px;
+}
+
 /* Map */
 
 .map {
@@ -586,6 +590,7 @@ a.site-navigation-current {
 .footer-logo-button {
   margin-top: 39px;
   cursor: pointer;
+  margin-bottom: auto;
 }
 
 .footer-logo-button:hover svg path {
@@ -655,6 +660,10 @@ a.site-navigation-current {
   background-repeat: no-repeat;
   background-image: url(../img/checkbox-off.svg);
   cursor: pointer;
+}
+
+.filter-item input:focus + .check-box {
+  outline: var(--basic-gray-back) solid 3px;
 }
 
 .filter-item input:checked + .check-box {
@@ -793,6 +802,10 @@ input {
   transform: scale(1.2);
 }
 
+.range-control .toggle:focus {
+  outline: var(--basic-gray-back) solid 3px;
+}
+
 .range-control .toggle-min {
   left: 0;
 }
@@ -818,6 +831,10 @@ input {
 .filter-button-submit:hover {
   color:var(--filter-button-text-hover);
   background-color: var(--filter-button-back-hover)
+}
+
+.filter-button-submit:focus {
+  outline: var(--basic-gray-back) solid 3px;
 }
 
 /* Results sort */
@@ -885,6 +902,10 @@ input {
   opacity: 1;
 }
 
+.results-sort-item:focus .title {
+  outline: var(--basic-black) solid 3px;
+}
+
 .results-sort-item input:checked + .title {
   border-bottom: none;
 }
@@ -923,6 +944,10 @@ input {
 
 .results-sort-button:active svg path  {
   fill: var(--sort-button-focus);
+}
+
+.results-sort-button input:focus + svg {
+  outline: var(--basic-black) solid 2px;
 }
 
 /* List of results */
@@ -1253,4 +1278,8 @@ input {
 .form-button-submit:active {
   background-color: var(--modal-search-back-press);
   color: var(--modal-search-text-press);
+}
+
+.form-button-submit:focus {
+  outline: var(--basic-black) solid 3px;
 }
