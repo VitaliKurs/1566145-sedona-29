@@ -115,28 +115,28 @@
       <section class="search">
         <h2 class="visually-hidden">Форма поска гостиницы</h2>
         <button class="search-button">Поиск гостиницы в Седоне</button>
-        <section class="modal-search">
+        <section class="modal modal-search">
           <h2 class="visually-hidden">Форма поиска гостиницы</h2>
           <form class="search-form">
             <label class="form-item">
               <span class="title">Дата заезда:</span>
-              <input type="date" class="form-input form-input-date" name="date-from" value="2017-04-27">
+              <input type="date" class="form-input form-input-date" name="date-from" value="2017-04-27" required>
             </label>
             <label class="form-item">
               <span class="title">Дата выезда:</span>
-              <input type="date" class="form-input form-input-date" name="date-to" value="2017-07-04">
+              <input type="date" class="form-input form-input-date" name="date-to" value="2017-07-04" required>
             </label>
             <div class="form-people">
               <label class="form-item">
                 <span class="title">Взрослые:</span>
                 <span class="item-range">
-                  <input type="number" class="form-input form-input-num" name="adult" value="2" max="99">
-                  <button class="num-button num-down" name="Кнопка сорировки результатов по убыванию">
+                  <input type="number" class="form-input form-input-num" name="adult" value="2" max="99" required>
+                  <button class="num-button num-down" name="Уменьшить количество взрослых" type="button">
                     <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="12" height="3" fill="#A9A9A9" />
                     </svg>
                   </button>
-                  <button class="num-button num-up" name="Кнопка сорировки результатов по возростанию">
+                  <button class="num-button num-up" name="Увеличить количество взрослых" type="button">
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
@@ -148,13 +148,13 @@
               <label class="form-item">
                 <span class="title">Дети:</span>
                 <span class="item-range">
-                  <input type="number" class="form-input form-input-num" name="child" value="0" max="99">
-                  <button class="num-button num-down" name="Кнопка сорировки результатов по убыванию">
+                  <input type="number" class="form-input form-input-num" name="child" value="0" max="99" required>
+                  <button class="num-button num-down" name="Уменьшить количество детей" type="button">
                     <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="12" height="3" fill="#A9A9A9" />
                     </svg>
                   </button>
-                  <button class="num-button num-up" name="Кнопка сорировки результатов по возростанию">
+                  <button class="num-button num-up" name="Увеличить количество детей" type="button">
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
@@ -228,6 +228,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/search.js"></script>
 </body>
 
 </html>

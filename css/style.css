@@ -1283,3 +1283,27 @@ input {
 .form-button-submit:focus {
   outline: var(--basic-black) solid 3px;
 }
+
+.modal {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+
+
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
