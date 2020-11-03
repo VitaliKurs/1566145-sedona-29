@@ -356,9 +356,7 @@ a.site-navigation-current {
   color: var(--basic-white);
 }
 
-.features-item:nth-child(3),
-.features-item:nth-child(4),
-.features-item:nth-child(5) {
+.features-item {
   background-color: var(--basic-gray-back);
   color: var(--basic-gray-text);
 }
@@ -1061,6 +1059,10 @@ input {
   color: var(--results-button-text-press);
 }
 
+.results-list-item-button-details:focus {
+  outline: 2px solid var(--basic-black);
+}
+
 .results-list-item-button-book {
   width: 142px;
   height: 27px;
@@ -1081,6 +1083,10 @@ input {
 .results-list-item-button-book:active {
   background-color: var(--results-button-back-book-focus);
   opacity: 0.3;
+}
+
+.results-list-item-button-book:focus {
+  outline: 2px solid var(--basic-black);
 }
 
 .results-list-item-stars {
@@ -1226,6 +1232,7 @@ input {
 .num-button {
   display: flex;
   position: absolute;
+  width: 38px;
   top: 0;
   bottom: 0;
   padding: 0;
@@ -1246,11 +1253,11 @@ input {
 }
 
 .num-down {
-  left: 14px;
+  left: 0px;
 }
 
 .num-up {
-  right: 14px;
+  right: 0px;
 }
 
 .form-button-submit {
