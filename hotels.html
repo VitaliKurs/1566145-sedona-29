@@ -30,7 +30,7 @@
     </header>
 
     <main>
-      <form method="get" action="#" class="filter">
+      <form method="post" action="https://echo.htmlacademy.ru/" class="filter">
         <h2 class="visually-hidden">Форма для фильтров</h2>
         <div class="filter-features">
           <h3 class="filter-label">Инфраструктура:</h3>
@@ -115,37 +115,37 @@
           <ul class="results-sort-list">
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="price" class="visually-hidden" checked>
+                <input name="sort" type="radio" value="price" class="visually-hidden results-sort-item-input" checked>
                 <span class="title">По цене</span>
               </label>
             </li>
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="type" class="visually-hidden">
+                <input name="sort" type="radio" value="type" class="visually-hidden results-sort-item-input">
                 <span class="title">По типу</span>
               </label>
             </li>
             <li>
               <label class="results-sort-item">
-                <input name="sort" type="radio" value="rate" class="visually-hidden">
+                <input name="sort" type="radio" value="rate" class="visually-hidden results-sort-item-input">
                 <span class="title">По рейтингу</span>
               </label>
             </li>
           </ul>
           <ul class="results-sort-buttons">
             <li>
-              <label class="results-sort-button">
-                <input name="sort-button" type="radio" value="up" class="visually-hidden">
-                <svg aria-label="Сортировка по возростанию" width="11" height="10" viewBox="0 0 11 10" fill="none"
+              <label>
+                <input class="results-sort-button-input visually-hidden" name="sort-button" type="radio" value="up">
+                <svg class="results-sort-button" aria-label="Сортировка по возростанию" width="11" height="10" viewBox="0 0 11 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
                 </svg>
               </label>
             </li>
             <li>
-              <label class="results-sort-button">
-                <input name="sort-button" type="radio" value="up" class="visually-hidden" checked>
-                <svg aria-label="Сортировка по убыванию" width="11" height="10" viewBox="0 0 11 10" fill="none"
+              <label>
+                <input class="results-sort-button-input visually-hidden" name="sort-button" type="radio" value="up" checked>
+                <svg class="results-sort-button" aria-label="Сортировка по убыванию" width="11" height="10" viewBox="0 0 11 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#CACACA" />
                 </svg>

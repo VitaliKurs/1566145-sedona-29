@@ -46,9 +46,33 @@ formButton.addEventListener("click", function(evt) {
   } else {
     searchChildNum.value = 0;
   }
+  searchStart.focus();
+});
+
+document.addEventListener("DOMContentLoaded", function(evt) {
+  evt.preventDefault();
+  try {
+    storage = localStorage.getItem("numAdult");
+  } catch (err) {
+    hasStorageAdult = false;
+  }
+  if (hasStorageAdult & storage != null) {
+    searchAdultNum.value = storage;
+  } else {
+    searchAdultNum.value = 2;
+  }
   console.log(storage);
 
-  searchStart.focus();
+  try {
+    storage = localStorage.getItem("numChild");
+  } catch (err) {
+    hasStorageChild = false;
+  }
+  if (hasStorageChild & storage != null) {
+    searchChildNum.value = storage;
+  } else {
+    searchChildNum.value = 0;
+  }
 });
 
 searchAdultDec.addEventListener("click", function(evt) {
